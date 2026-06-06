@@ -1,83 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rreth Nesh - Restaurant Koha</title>
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="rreth-nesh.css">
 </head>
 <body>
 
-<!-- NAVBAR -->
-<header class="header">
-    <nav class="navbar">
-        <h1 class="logo">Restaurant Koha</h1>
+    <header class="site-header">
+        <nav class="navbar">
+            <h1 class="logo">Restaurant Koha</h1>
 
-        <ul class="nav-links">
-            <li><a href="index.html">Ballina</a></li>
-            <li><a href="rreth-nesh.html">Rreth Nesh</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="contact.html">Kontakti</a></li>
-        </ul>
-    </nav>
-</header>
+            <ul class="nav-links">
+                <li><a href="index.html">Ballina</a></li>
+                <li><a href="rreth-nesh.html" class="active">Rreth Nesh</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Kontakti</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <section class="about-hero">
+        <div class="hero-overlay"></div>
 
+        <div class="hero-content reveal">
+            <span class="hero-badge">Restaurant Koha • Mitrovicë</span>
+            <h1>Një vend ku shija, stili dhe atmosfera bashkohen</h1>
+            <p>
+                Restaurant Koha është krijuar për të ofruar një përvojë të veçantë,
+                me ambient modern, shërbim profesional dhe shije që mbeten në mendje.
+            </p>
 
-<!-- ABOUT -->
-<section class="section">
-    <h2 class="title">Kush jemi ne?</h2>
-    <p class="text">
-        Restaurant Koha është një restorant familjar në Mitrovicë që ofron ushqim tradicional,
-        ambient të ngrohtë dhe përvojë unike për çdo klient.
-    </p>
-</section>
+            <div class="hero-buttons">
+                <a href="menu.html" class="btn btn-gold">Shiko Menunë</a>
+                <a href="contact.html" class="btn btn-outline">Na Kontakto</a>
+            </div>
+        </div>
+    </section>
 
-<!-- FEATURES -->
-<section class="features">
-    <div class="card">
-        <h3>🍽 Ushqim Tradicional</h3>
-        <p>Receta të vjetra shqiptare të përgatitura me dashuri.</p>
-    </div>
+    <section class="about-section">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-tag">Historia jonë</span>
+                <h3>E ndërtuar për t’u dalluar</h3>
+                <p>
+                    Me një kombinim të traditës dhe dizajnit modern, Restaurant Koha sjell një atmosferë
+                    të ngrohtë dhe të rafinuar për familje, miq dhe raste speciale.
+                </p>
+            </div>
 
-    <div class="card">
-        <h3>🔥 Cilësi e Lartë</h3>
-        <p>Përdorim vetëm përbërës të freskët dhe cilësorë.</p>
-    </div>
+            <div class="about-grid">
+                <div class="glass-card reveal">
+                    <h4>Çfarë ofrojmë</h4>
 
-    <div class="card">
-        <h3>👨‍👩‍👧 Ambient Familjar</h3>
-        <p>Vend ideal për familje dhe shoqëri.</p>
-    </div>
-</section>
+                    <div class="info-list">
+                        <div class="info-item">
+                            <span>01</span>
+                            <p>Ushqim të freskët dhe cilësor</p>
+                        </div>
+                        <div class="info-item">
+                            <span>02</span>
+                            <p>Ambient elegant dhe komod</p>
+                        </div>
+                        <div class="info-item">
+                            <span>03</span>
+                            <p>Shërbim profesional dhe i kujdesshëm</p>
+                        </div>
+                    </div>
+                </div>
 
-<!-- STATS -->
-<section class="stats">
-    <div class="stat">
-        <h2>10+</h2>
-        <p>Vite përvojë</p>
-    </div>
-    <div class="stat">
-        <h2>5000+</h2>
-        <p>Klientë të kënaqur</p>
-    </div>
-    <div class="stat">
-        <h2>50+</h2>
-        <p>Ushqime në menu</p>
-    </div>
-</section>
+                <div class="glass-card reveal accent-card">
+                    <h4>Pse zgjedhin Koha?</h4>
 
-<!-- CTA -->
-<section class="cta">
-    <h2>Ejani dhe provoni shijen tonë!</h2>
-    <a href="contact.html" class="btn">Na Kontakto</a>
-</section>
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <div class="feature-number">01</div>
+                            <div>
+                                <h5>Shije premium</h5>
+                                <p>Çdo pjatë përgatitet me përbërës të zgjedhur dhe prezantim elegant.</p>
+                            </div>
+                        </div>
 
-<!-- FOOTER -->
-<footer class="footer">
-    <p>2026 Restaurant Koha - Mitrovicë</p>
-</footer>
+                        <div class="feature-item">
+                            <div class="feature-number">02</div>
+                            <div>
+                                <h5>Atmosferë unike</h5>
+                                <p>Dritë e ngrohtë, stil modern dhe ambient i krijuar për rehati maksimale.</p>
+                            </div>
+                        </div>
 
+                        <div class="feature-item">
+                            <div class="feature-number">03</div>
+                            <div>
+                                <h5>Përvojë e këndshme</h5>
+                                <p>Stafi ynë kujdeset që çdo vizitë të jetë e veçantë nga fillimi deri në fund.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="showcase-section">
+        <div class="container">
+            <div class="section-head center reveal">
+                <span class="section-tag">Pikat kryesore</span>
+                <h3>Si e bëjmë vendin tonë të paharrueshëm</h3>
+            </div>
+
+            <div class="cards-grid">
+                <div class="premium-card reveal">
+                    <div class="card-icon">🍴</div>
+                    <h4>Kuzhinë e kujdesshme</h4>
+                    <p>Ushqime të përgatitura me pasion, shije të balancuar dhe standard të lartë.</p>
+                </div>
+
+                <div class="premium-card reveal">
+                    <div class="card-icon">✨</div>
+                    <h4>Ambient modern</h4>
+                    <p>Një hapësirë që duket bukur në sy dhe krijon ndjesi të ngrohtë për çdo klient.</p>
+                </div>
+
+                <div class="premium-card reveal">
+                    <div class="card-icon">⭐</div>
+                    <h4>Shërbim i veçantë</h4>
+                    <p>Trajtim i afërt, profesional dhe i shpejtë për një përvojë të këndshme.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-box reveal">
+                    <h3><span class="counter" data-target="120">0</span>+</h3>
+                    <p>Ushqime speciale</p>
+                </div>
+
+                <div class="stat-box reveal">
+                    <h3><span class="counter" data-target="15">0</span>+</h3>
+                    <p>Vite përvojë</p>
+                </div>
+
+                <div class="stat-box reveal">
+                    <h3><span class="counter" data-target="5000">0</span>+</h3>
+                    <p>Klientë të kënaqur</p>
+                </div>
+
+                <div class="stat-box reveal">
+                    <h3><span class="counter" data-target="100">0</span>%</h3>
+                    <p>Përkushtim për cilësi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <div class="container">
+            <div class="section-head center reveal">
+                <span class="section-tag">Vlerat tona</span>
+                <h3>Çfarë na bën ndryshe</h3>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card reveal">
+                    <h4>Tradita</h4>
+                    <p>Ruajmë shijet që i duan familjet, por i sjellim me një paraqitje moderne.</p>
+                </div>
+
+                <div class="value-card reveal">
+                    <h4>Eleganca</h4>
+                    <p>Çdo detaj në ambient është menduar për një eksperiencë vizuale dhe komode.</p>
+                </div>
+
+                <div class="value-card reveal">
+                    <h4>Besimi</h4>
+                    <p>Synojmë që çdo mysafir të largohet i kënaqur dhe të kthehet përsëri.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box reveal">
+                <h3>Na vizito dhe përjeto atmosferën vetë</h3>
+                <p>Një ambient i veçantë, shije e mirë dhe kujdes i plotë për çdo klient.</p>
+                <a href="contact.html" class="btn btn-gold">Rezervo Tani</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Restaurant Koha - Mitrovicë</p>
+    </footer>
+
+    <script src="rreth-nesh.js"></script>
 </body>
 </html>

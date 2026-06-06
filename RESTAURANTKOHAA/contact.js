@@ -1,24 +1,41 @@
-const form = document.querySelector("form");
-const button = document.querySelector("button");
+document.addEventListener("DOMContentLoaded", () => {
+    const revealItems = document.querySelectorAll(".reveal");
 
-button.addEventListener("click", () => {
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
 
-    const emri = document.querySelector('input[type="text"]').value;
-    const telefoni = document.querySelectorAll('input[type="text"]')[1].value;
-    const email = document.querySelector('input[type="email"]').value;
-    const mesazhi = document.querySelector("textarea").value;
+    revealItems.forEach(item => revealObserver.observe(item));
+});
 
-    if(emri === "" || telefoni === "" || mesazhi === ""){
-        alert("Ju lutem plotësoni të gjitha fushat e detyrueshme!");
+function dergo() {
+    const emri = document.getElementById("emri").value.trim();
+    const mbiemri = document.getElementById("mbiemri").value.trim();
+    const telefoni = document.getElementById("telefoni").value.trim();
+    const mesazhi = document.getElementById("mesazhi").value.trim();
+    const msg = document.getElementById("msg");
+
+    if (emri === "" || mbiemri === "" || telefoni === "" || mesazhi === "") {
+        msg.innerText = "Ju lutem plotësoni të gjitha fushat!";
+        msg.style.color = "#ff6b6b";
         return;
     }
 
-    alert(
-        "Mesazhi u dërgua me sukses! 🎉\n\n" +
-        "Emri: " + emri +
-        "\nTelefoni: " + telefoni +
-        "\nEmail: " + email
-    );
+    msg.innerText = "";
+    document.getElementById("popup").style.display = "flex";
 
-    form.reset();
-});
+    document.getElementById("emri").value = "";
+    document.getElementById("mbiemri").value = "";
+    document.getElementById("telefoni").value = "";
+    document.getElementById("mesazhi").value = "";
+}
+
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}

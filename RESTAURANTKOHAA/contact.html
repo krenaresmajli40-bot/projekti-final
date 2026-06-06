@@ -16,72 +16,134 @@
             <li><a href="index.html">Ballina</a></li>
             <li><a href="rreth-nesh.html">Rreth Nesh</a></li>
             <li><a href="menu.html">Menu</a></li>
-            <li><a href="contact.html">Kontakti</a></li>
+            <li><a href="contact.html" class="active">Kontakti</a></li>
         </ul>
     </nav>
 </header>
 
 <section class="contact-hero">
+    <div class="hero-overlay"></div>
 
-    <div class="overlay"></div>
-
-    <div class="contact-container">
-
-        <div class="contact-left">
-            <h1>Na Kontakto</h1>
+    <div class="hero-content">
+        <div class="contact-panel reveal">
+            <span class="badge">📩 Kontakto Restaurant Koha</span>
+            <h2>Na shkruaj dhe ne të përgjigjemi shpejt</h2>
             <p>
-                Rezervo tavolinën ose na shkruaj për çdo pyetje.
-                Jemi gjithmonë të gatshëm për ty 💛
+                Plotëso të dhënat më poshtë dhe na dërgo mesazhin tënd.
+                Ne jemi këtu për porosi, rezervime dhe pyetje të ndryshme.
             </p>
 
-            <div class="mini-info">
-                <div>📞 +383 49 616 369</div>
-                <div>⏰ 10:00 - 23:00</div>
-                <div>🍽 Restaurant Koha</div>
+            <div class="form-grid">
+                <div class="input-box">
+                    <input id="emri" type="text" required>
+                    <label>Emri</label>
+                </div>
+
+                <div class="input-box">
+                    <input id="mbiemri" type="text" required>
+                    <label>Mbiemri</label>
+                </div>
+
+                <div class="input-box full">
+                    <input id="telefoni" type="text" required>
+                    <label>Numri i telefonit</label>
+                </div>
+
+                <div class="input-box full">
+                    <textarea id="mesazhi" required></textarea>
+                    <label>Mesazhi</label>
+                </div>
+            </div>
+
+            <button onclick="dergo()">Dërgo Mesazhin</button>
+            <p id="msg"></p>
+        </div>
+
+        <div class="info-panel reveal">
+            <div class="info-card">
+                <h3>Orari i punës</h3>
+                <div class="schedule-item">
+                    <span>E Hënë - E Premte</span>
+                    <strong>08:00 - 23:00</strong>
+                </div>
+                <div class="schedule-item">
+                    <span>E Shtunë - E Diel</span>
+                    <strong>09:00 - 00:00</strong>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h3>Ditët e punës</h3>
+                <div class="days-wrap">
+                    <span class="day active-day">Hën</span>
+                    <span class="day active-day">Mar</span>
+                    <span class="day active-day">Mër</span>
+                    <span class="day active-day">Enj</span>
+                    <span class="day active-day">Pre</span>
+                    <span class="day active-day">Sht</span>
+                    <span class="day active-day">Die</span>
+                </div>
+                <p class="small-text">Ne punojmë çdo ditë për t'ju shërbyer më mirë.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Kontakt i shpejtë</h3>
+                <div class="quick-contact">
+                    <div>
+                        <span>📞</span>
+                        <p>044 123 456</p>
+                    </div>
+                    <div>
+                        <span>📍</span>
+                        <p>Mitrovicë, Kosovë</p>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="contact-right">
-
-            <form>
-                <input type="text" placeholder="Emri i plotë">
-                <input type="text" placeholder="Numri i telefonit">
-                <input type="email" placeholder="Email (opsional)">
-                <textarea placeholder="Shkruaj mesazhin..."></textarea>
-
-                <button type="button">Dërgo Mesazhin</button>
-            </form>
-
-        </div>
-
     </div>
-
 </section>
 
 <section class="bottom-cards">
+    <div class="container">
+        <div class="section-title reveal">
+            <span class="section-tag">Info të rëndësishme</span>
+            <h2>Gjithçka që duhet të dish para se të na kontaktosh</h2>
+        </div>
 
-    <div class="card">
-        <h3>🍽 Rezervim i Shpejtë</h3>
-        <p>Rezervo tavolinën në pak sekonda.</p>
+        <div class="cards-grid">
+            <div class="mini-card reveal">
+                <div class="mini-icon">⏰</div>
+                <h3>Kur fillojmë?</h3>
+                <p>Hapemi çdo ditë në orën 08:00 gjatë javës dhe 09:00 në fundjavë.</p>
+            </div>
+
+            <div class="mini-card reveal">
+                <div class="mini-icon">☎️</div>
+                <h3>Na telefono</h3>
+                <p>Numri i restaurantit: <strong>044 123 456</strong></p>
+            </div>
+
+            <div class="mini-card reveal">
+                <div class="mini-icon">🍽️</div>
+                <h3>Rezervime</h3>
+                <p>Na shkruaj për rezervime, porosi dhe pyetje rreth menusë.</p>
+            </div>
+        </div>
     </div>
-
-    <div class="card">
-        <h3>⭐ Shërbim Premium</h3>
-        <p>Staf profesional dhe mikpritje e ngrohtë.</p>
-    </div>
-
-    <div class="card">
-        <h3>🔥 Përvojë Unike</h3>
-        <p>Atmosferë moderne dhe ushqim cilësor.</p>
-    </div>
-
 </section>
 
-<script src="contact.js"></script>
-
 <footer>
-    <p>© 2026 Restaurant Koha - Mitrovicë</p>
+    <p>© 2026 Restaurant Koha - Mitrovicë | Tel: 044 123 456</p>
 </footer>
 
+<div id="popup" class="popup">
+    <div class="popup-box">
+        <h3>✅ Sukses!</h3>
+        <p>Dërgesa juaj ka shkuar. Faleminderit nga ju!</p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+</div>
+
+<script src="contact.js"></script>
 </body>
 </html>

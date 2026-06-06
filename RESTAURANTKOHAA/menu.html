@@ -1,34 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Menu - Restaurant Koha</title>
     <link rel="stylesheet" href="menu.css">
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-       <!-- NAVBAR -->
-    <header>
-        <nav class="navbar">
-            <h1 class="logo">Restaurant Koha</h1>
 
-            <ul class="nav-links">
-                <li><a href="index.html">Ballina</a></li>
-                <li><a href="rreth-nesh.html">Rreth Nesh</a></li>
-                <li><a href="m
-                    enu.html">Menu</a></li>
-                <li><a href="contact.html">Kontakti</a></li>
-                <button id="prev">❮</button>
-<button id="next">❯</button>
+<header class="header">
+    <nav class="navbar">
+        <h1 class="logo">Restaurant Koha</h1>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Ballina</a></li>
+            <li><a href="rreth-nesh.html">Rreth Nesh</a></li>
+            <li><a href="menu.html" class="active">Menu</a></li>
+            <li><a href="contact.html">Kontakti</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+        <p class="badge-text">Shije tradicionale • Ambient elegant • Shërbim i ngrohtë</p>
+        <h1>Menu Restaurant Koha</h1>
+        <p>Shfleto menynë tonë me shigjeta ose lëre që të ndërron vetë.</p>
+    </div>
+</section>
+
+<main class="menu-page">
+    <section class="slider-section">
+        <div class="slider-box">
+
+            <button class="arrow-btn left" id="prevBtn" aria-label="Previous slide">&#10094;</button>
+
+            <div class="image-wrapper">
+                <img id="menuImage" src="assets/menu1.png" alt="Menu Restaurant Koha">
+            </div>
+
+            <div class="image-wrapper">
+                <img id="menuImage" src="assets/menu2.png" alt="Menu Restaurant Koha">
+            </div>
+
+
+            <button class="arrow-btn right" id="nextBtn" aria-label="Next slide">&#10095;</button>
+
+        </div>
+
+        <div class="dots" id="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+        </div>
+
+        <div class="caption">
+            <h3 id="slideTitle">Menu e parë</h3>
+            <p id="slideText">Shfleto ofertat dhe specialitetet tona.</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 Restaurant Koha - Mitrovicë</p>
+</footer>
 
 <script src="menu.js"></script>
-            </ul>
-        </nav>
-    </header>
-    <section class="menu-foto">
-
-
-    </section>
 </body>
 </html>

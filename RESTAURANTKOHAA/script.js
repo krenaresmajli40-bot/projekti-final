@@ -1,6 +1,7 @@
 
 
 
+
 // =========================
 // RESTAURANT KOHA JS
 // =========================
@@ -10,7 +11,13 @@ window.onload = function () {
     console.log("Mirë se vini në Restaurant Koha!");
 };
 
+// =========================
+// BUTTON MESSAGE
+// =========================
 
+function showMessage() {
+    alert("Rezervimi juaj u pranua me sukses!");
+}
 
 // =========================
 // CHANGE NAVBAR COLOR
@@ -261,53 +268,5 @@ document.addEventListener("DOMContentLoaded", () => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "light") {
         body.classList.remove("dark-mode");
-    }
-});
-
-
-const menuFoto = document.querySelector(".menu-foto");
-
-const fotot = [
-    "./assets/menu1.jpg",
-    "./assets/menu2.jpg",
-    "./assets/menu3.jpg"
-];
-
-let index = 0;
-
-menuFoto.style.backgroundImage = `url('${fotot[index]}')`;
-
-document.addEventListener("keydown", (e) => {
-
-    if (e.key === "ArrowRight") {
-        index++;
-
-        if (index >= fotot.length) {
-            index = 0;
-        }
-
-        menuFoto.style.opacity = "0";
-
-        setTimeout(() => {
-            menuFoto.style.backgroundImage =
-                `url('${fotot[index]}')`;
-            menuFoto.style.opacity = "1";
-        }, 300);
-    }
-
-    if (e.key === "ArrowLeft") {
-        index--;
-
-        if (index < 0) {
-            index = fotot.length - 1;
-        }
-
-        menuFoto.style.opacity = "0";
-
-        setTimeout(() => {
-            menuFoto.style.backgroundImage =
-                `url('${fotot[index]}')`;
-            menuFoto.style.opacity = "1";
-        }, 300);
     }
 });
