@@ -8,64 +8,99 @@
 </head>
 <body>
 
-<header class="header">
-    <nav class="navbar">
-        <h1 class="logo">Restaurant Koha</h1>
+    <header class="site-header">
+        <nav class="navbar">
+            <h1 class="logo">Restaurant Koha</h1>
 
-        <ul class="nav-links">
-            <li><a href="index.html">Ballina</a></li>
-            <li><a href="rreth-nesh.html">Rreth Nesh</a></li>
-            <li><a href="menu.html" class="active">Menu</a></li>
-            <li><a href="contact.html">Kontakti</a></li>
-        </ul>
-    </nav>
-</header>
+            <ul class="nav-links">
+                <li><a href="index.html">Ballina</a></li>
+                <li><a href="rreth-nesh.html">Rreth Nesh</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="contact.html">Kontakti</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<section class="hero">
-    <div class="overlay"></div>
+    <section class="menu-hero">
+        <div class="hero-overlay"></div>
 
-    <div class="hero-content">
-        <p class="badge-text">Shije tradicionale • Ambient elegant • Shërbim i ngrohtë</p>
-        <h1>Menu Restaurant Koha</h1>
-        <p>Shfleto menynë tonë me shigjeta ose lëre që të ndërron vetë.</p>
-    </div>
-</section>
+        <div class="hero-content reveal">
+            <span class="hero-badge">Restaurant Koha • Mitrovicë</span>
+            <h1>Menu jonë e veçantë</h1>
+            <p>
+                Shfleto menunë tonë moderne dhe elegante. Me shigjeta mund t’i ndërroni fotot,
+                ose ato ndryshojnë vetë automatikisht.
+            </p>
 
-<main class="menu-page">
-    <section class="slider-section">
-        <div class="slider-box">
-
-            <button class="arrow-btn left" id="prevBtn" aria-label="Previous slide">&#10094;</button>
-
-            <div class="image-wrapper">
-                <img id="menuImage" src="assets/menu1.png" alt="Menu Restaurant Koha">
+            <div class="hero-buttons">
+                <a href="contact.html" class="btn btn-gold">Rezervo Tani</a>
+                <a href="rreth-nesh.html" class="btn btn-outline">Më Shumë</a>
             </div>
-
-            <div class="image-wrapper">
-                <img id="menuImage" src="assets/menu2.png" alt="Menu Restaurant Koha">
-            </div>
-
-
-            <button class="arrow-btn right" id="nextBtn" aria-label="Next slide">&#10095;</button>
-
-        </div>
-
-        <div class="dots" id="dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-        </div>
-
-        <div class="caption">
-            <h3 id="slideTitle">Menu e parë</h3>
-            <p id="slideText">Shfleto ofertat dhe specialitetet tona.</p>
         </div>
     </section>
-</main>
 
-<footer>
-    <p>© 2026 Restaurant Koha - Mitrovicë</p>
-</footer>
+    <section class="menu-section">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-tag">Menu</span>
+                <h3>Zgjidhni shijen tuaj</h3>
+                <p>
+                    Dy menutë tona janë vendosur në slider për një prezantim modern dhe të pastër.
+                </p>
+            </div>
 
-<script src="menu.js"></script>
+            <div class="slider-wrapper reveal">
+                <div class="slider-box">
+                    <button class="arrow-btn left" id="prevBtn" aria-label="Previous slide">&#10094;</button>
+
+                    <div class="image-wrapper">
+                        <img id="menuImage" src="assets/menu1.png" alt="Menu Restaurant Koha">
+                    </div>
+
+                    <button class="arrow-btn right" id="nextBtn" aria-label="Next slide">&#10095;</button>
+                </div>
+
+                <div class="dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                </div>
+
+                <div class="caption">
+                    <h3 id="slideTitle">Menu e parë</h3>
+                    <p id="slideText">Shfleto specialitetet dhe ofertat tona të para.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature-section">
+        <div class="container">
+            <div class="cards-grid">
+                <div class="premium-card reveal">
+                    <div class="card-icon">🍽️</div>
+                    <h4>Shije tradicionale</h4>
+                    <p>Ushqime të përgatitura me kujdes, shije dhe stil modern.</p>
+                </div>
+
+                <div class="premium-card reveal">
+                    <div class="card-icon">✨</div>
+                    <h4>Prezantim elegant</h4>
+                    <p>Menu e paraqitur në mënyrë të pastër, profesionale dhe luksoze.</p>
+                </div>
+
+                <div class="premium-card reveal">
+                    <div class="card-icon">⭐</div>
+                    <h4>Përvojë e këndshme</h4>
+                    <p>Një ambient i ngrohtë që e bën vizitën tuaj më të veçantë.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Restaurant Koha - Mitrovicë</p>
+    </footer>
+
+    <script src="menu.js"></script>
 </body>
 </html>
