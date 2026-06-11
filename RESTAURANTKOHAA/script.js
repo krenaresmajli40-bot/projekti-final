@@ -1,272 +1,340 @@
+// =====================================
+// RESTAURANT KOHA - SCRIPT.JS
+// =====================================
 
+// ORA DHE DATA LIVE
 
-
-
-// =========================
-// RESTAURANT KOHA JS
-// =========================
-
-// Welcome Message
-window.onload = function () {
-    console.log("Mirë se vini në Restaurant Koha!");
-};
-
-// =========================
-// BUTTON MESSAGE
-// =========================
-
-function showMessage() {
-    alert("Rezervimi juaj u pranua me sukses!");
-}
-
-// =========================
-// CHANGE NAVBAR COLOR
-// =========================
-
-window.addEventListener("scroll", function () {
-
-    const navbar = document.querySelector(".navbar");
-
-    if (window.scrollY > 50) {
-        navbar.style.background = "darkred";
-        navbar.style.transition = "0.5s";
-    } else {
-        navbar.style.background = "#111";
-    }
-
-});
-
-// =========================
-// MENU CARD HOVER EFFECT
-// =========================
-
-const cards = document.querySelectorAll(".card");
-
-cards.forEach(card => {
-
-    card.addEventListener("mouseenter", function () {
-        card.style.transform = "scale(1.05)";
-        card.style.boxShadow = "0px 10px 20px rgba(0,0,0,0.3)";
-    });
-
-    card.addEventListener("mouseleave", function () {
-        card.style.transform = "scale(1)";
-        card.style.boxShadow = "none";
-    });
-
-});
-
-// =========================
-// DARK MODE
-// =========================
-
-const darkBtn = document.createElement("button");
-
-darkBtn.innerText = "Dark Mode";
-
-darkBtn.style.position = "fixed";
-darkBtn.style.right = "20px";
-darkBtn.style.bottom = "20px";
-darkBtn.style.padding = "12px";
-darkBtn.style.border = "none";
-darkBtn.style.background = "gold";
-darkBtn.style.cursor = "pointer";
-darkBtn.style.borderRadius = "8px";
-darkBtn.style.fontWeight = "bold";
-
-document.body.appendChild(darkBtn);
-
-let darkMode = false;
-
-darkBtn.addEventListener("click", function () {
-
-    if (!darkMode) {
-
-        document.body.style.background = "#111";
-        document.body.style.color = "white";
-
-        document.querySelectorAll(".card").forEach(card => {
-            card.style.background = "#222";
-            card.style.color = "white";
-        });
-
-        darkBtn.innerText = "Light Mode";
-
-        darkMode = true;
-
-    } else {
-
-        document.body.style.background = "#f5f5f5";
-        document.body.style.color = "#333";
-
-        document.querySelectorAll(".card").forEach(card => {
-            card.style.background = "#f0f0f0";
-            card.style.color = "#333";
-        });
-
-        darkBtn.innerText = "Dark Mode";
-
-        darkMode = false;
-    }
-
-});
-
-// =========================
-// LIVE CLOCK
-// =========================
-
-const clock = document.createElement("div");
-
-clock.style.position = "fixed";
-clock.style.top = "20px";
-clock.style.right = "20px";
-clock.style.background = "gold";
-clock.style.padding = "10px";
-clock.style.borderRadius = "10px";
-clock.style.fontWeight = "bold";
-clock.style.zIndex = "999";
-
-document.body.appendChild(clock);
+const clock = document.getElementById("clock");
 
 function updateClock() {
 
-    const now = new Date();
+const now = new Date();
 
-    let hours = now.getHours();
-    let minutes = now.getMinutes();
-    let seconds = now.getSeconds();
+const time = now.toLocaleTimeString("sq-AL");
 
-    if (minutes < 10) {
-        minutes = "0" + minutes;
-    }
+const date = now.toLocaleDateString("sq-AL", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+});
 
-    if (seconds < 10) {
-        seconds = "0" + seconds;
-    }
-
-    clock.innerHTML = `${hours}:${minutes}:${seconds}`;
+if(clock){
+    clock.innerHTML = `
+        ${time}
+        <br>
+        <small>${date}</small>
+    `;
 }
 
+
+}
+
+updateClock();
 setInterval(updateClock, 1000);
 
-// =========================
+// =====================================
+// NAVBAR SCROLL EFFECT
+// =====================================
+
+window.addEventListener("scroll", () => {
+
+
+const navbar = document.querySelector(".navbar");
+
+if (!navbar) return;
+
+if (window.scrollY > 50) {
+
+    navbar.style.background =
+    "rgba(0,0,0,.95)";
+
+    navbar.style.borderBottom =
+    "2px solid gold";
+
+    navbar.style.boxShadow =
+    "0 5px 20px rgba(0,0,0,.5)";
+
+} else {
+
+    navbar.style.background =
+    "rgba(0,0,0,.50)";
+
+    navbar.style.boxShadow = "none";
+}
+```
+
+});
+
+// =====================================
+// TYPING EFFECT
+// =====================================
+
+const heroTitle =
+document.querySelector(".hero h2");
+
+if(heroTitle){
+
+```
+const text =
+"Shije që mbetet në kujtesë";
+
+heroTitle.innerHTML = "";
+
+let i = 0;
+
+function typing(){
+
+    if(i < text.length){
+
+        heroTitle.innerHTML +=
+        text.charAt(i);
+
+        i++;
+
+        setTimeout(typing, 80);
+    }
+
+}
+
+typing();
+```
+
+}
+
+// =====================================
+// COUNTER ANIMATION
+// =====================================
+
+const counters =
+document.querySelectorAll(".stats h3");
+
+counters.forEach(counter => {
+
+```
+const target =
+parseInt(counter.innerText);
+
+let count = 0;
+
+const updateCounter = () => {
+
+    const increment =
+    target / 100;
+
+    if(count < target){
+
+        count += increment;
+
+        counter.innerText =
+        Math.floor(count) + "+";
+
+        requestAnimationFrame(
+        updateCounter);
+
+    }else{
+
+        counter.innerText =
+        target + "+";
+    }
+
+};
+
+updateCounter();
+```
+
+});
+
+// =====================================
 // SCROLL TO TOP BUTTON
-// =========================
+// =====================================
 
-const topBtn = document.createElement("button");
+const topBtn =
+document.createElement("button");
 
-topBtn.innerText = "↑";
+topBtn.innerHTML = "↑";
 
 topBtn.style.position = "fixed";
-topBtn.style.bottom = "80px";
+topBtn.style.bottom = "20px";
 topBtn.style.right = "20px";
-topBtn.style.padding = "15px";
+topBtn.style.width = "60px";
+topBtn.style.height = "60px";
 topBtn.style.border = "none";
 topBtn.style.borderRadius = "50%";
-topBtn.style.background = "darkred";
-topBtn.style.color = "white";
+topBtn.style.background = "gold";
+topBtn.style.color = "#111";
+topBtn.style.fontSize = "24px";
+topBtn.style.fontWeight = "bold";
 topBtn.style.cursor = "pointer";
 topBtn.style.display = "none";
+topBtn.style.zIndex = "9999";
+topBtn.style.boxShadow =
+"0 5px 15px rgba(0,0,0,.4)";
 
 document.body.appendChild(topBtn);
 
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", () => {
 
-    if (window.scrollY > 300) {
-        topBtn.style.display = "block";
-    } else {
-        topBtn.style.display = "none";
-    }
+```
+if(window.scrollY > 300){
 
-});
+    topBtn.style.display =
+    "block";
 
-topBtn.addEventListener("click", function () {
+}else{
 
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-
-});
-
-// =========================
-// TYPING EFFECT
-// =========================
-
-const text = "Shija më e mirë në Mitrovicë 🍴";
-
-let index = 0;
-
-const typing = document.createElement("h2");
-
-typing.style.textAlign = "center";
-typing.style.marginTop = "30px";
-
-document.body.prepend(typing);
-
-function writeText() {
-
-    if (index < text.length) {
-
-        typing.innerHTML += text.charAt(index);
-
-        index++;
-
-        setTimeout(writeText, 100);
-
-    }
-
+    topBtn.style.display =
+    "none";
 }
+```
 
-writeText();
-
-// =========================
-// RANDOM BACKGROUND COLORS
-// =========================
-
-const colors = [
-    "#1a1a1a",
-    "#2c3e50",
-    "#8b0000",
-    "#34495e"
-];
-
-setInterval(() => {
-
-    const random = Math.floor(Math.random() * colors.length);
-
-    document.querySelector("footer").style.background = colors[random];
-
-}, 3000);
-
-
-
-// script.js
-
-document.addEventListener("DOMContentLoaded", () => {
-    const body = document.body;
-
-    // Always enable dark mode by default
-    body.classList.add("dark-mode");
-
-    // Optional: toggle button (nëse e shton më vonë)
-    const toggle = document.getElementById("darkToggle");
-
-    if (toggle) {
-        toggle.addEventListener("click", () => {
-            body.classList.toggle("dark-mode");
-
-            if (body.classList.contains("dark-mode")) {
-                localStorage.setItem("theme", "dark");
-            } else {
-                localStorage.setItem("theme", "light");
-            }
-        });
-    }
-
-    // Load saved theme
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "light") {
-        body.classList.remove("dark-mode");
-    }
 });
+
+topBtn.addEventListener("click", () => {
+
+```
+window.scrollTo({
+    top:0,
+    behavior:"smooth"
+});
+```
+
+});
+
+// =====================================
+// WELCOME MESSAGE
+// =====================================
+
+window.addEventListener("load", () => {
+
+```
+setTimeout(() => {
+
+    console.log(
+    "Mirë se vini në Restaurant Koha 🍽️");
+
+}, 500);
+```
+
+});
+
+// =====================================
+// PAGE FADE IN
+// =====================================
+
+document.body.style.opacity = "0";
+
+window.addEventListener("load", () => {
+
+```
+document.body.style.transition =
+"opacity 1.5s ease";
+
+document.body.style.opacity = "1";
+```
+
+});
+
+// =====================================
+// DARK / LIGHT MODE
+// =====================================
+
+const darkBtn =
+document.createElement("button");
+
+darkBtn.innerHTML = "🌙";
+
+darkBtn.style.position = "fixed";
+darkBtn.style.left = "20px";
+darkBtn.style.bottom = "20px";
+darkBtn.style.width = "60px";
+darkBtn.style.height = "60px";
+darkBtn.style.border = "none";
+darkBtn.style.borderRadius = "50%";
+darkBtn.style.cursor = "pointer";
+darkBtn.style.fontSize = "24px";
+darkBtn.style.background = "white";
+darkBtn.style.zIndex = "9999";
+
+document.body.appendChild(darkBtn);
+
+let darkMode = true;
+
+darkBtn.addEventListener("click", () => {
+
+```
+if(darkMode){
+
+    document.body.style.filter =
+    "brightness(1.15)";
+
+    darkBtn.innerHTML = "☀️";
+
+    darkMode = false;
+
+}else{
+
+    document.body.style.filter =
+    "brightness(1)";
+
+    darkBtn.innerHTML = "🌙";
+
+    darkMode = true;
+}
+```
+
+});
+
+// =====================================
+// PARALLAX HERO
+// =====================================
+
+window.addEventListener("scroll", () => {
+
+```
+const hero =
+document.querySelector(".hero");
+
+if(hero){
+
+    hero.style.backgroundPositionY =
+    window.pageYOffset * 0.5 + "px";
+}
+```
+
+});
+
+// =====================================
+// BUTTON HOVER EFFECT
+// =====================================
+
+const buttons =
+document.querySelectorAll(".btn");
+
+buttons.forEach(btn => {
+
+```
+btn.addEventListener(
+"mouseenter", () => {
+
+    btn.style.transform =
+    "translateY(-5px) scale(1.05)";
+
+});
+
+btn.addEventListener(
+"mouseleave", () => {
+
+    btn.style.transform =
+    "translateY(0) scale(1)";
+});
+
+
+});
+
+
+
+
+// =====================================
+// END
+// =====================================
