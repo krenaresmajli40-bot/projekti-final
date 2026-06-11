@@ -1,44 +1,117 @@
 <!DOCTYPE html>
+
 <html lang="sq">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Koha - Mitrovicë</title>
-
+    <title>Restaurant Koha</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <header>
-        <nav class="navbar">
-            <h1 class="logo">Restaurant Koha</h1>
+<header>
+    <nav class="navbar">
 
-            <ul class="nav-links">
-                <li><a href="index.html">Ballina</a></li>
-                <li><a href="rreth-nesh.html">Rreth Nesh</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="contact.html">Kontakti</a></li>
-            </ul>
-        </nav>
-    </header>
+```
+    <h1 class="logo">Restaurant Koha</h1>
 
-    <!-- HERO SECTION -->
-    <section class="hero" id="home">
-        <div class="hero-text">
-            <h2>Mirë se vini në Restaurant Koha</h2>
-            <p>Shije tradicionale dhe moderne në zemër të Mitrovicës.</p>
-            <button onclick="showMessage()">Rreth nesh</button>
+    <ul class="nav-links">
+        <li><a href="index.html" class="active">Ballina</a></li>
+        <li><a href="rreth-nesh.html">Rreth Nesh</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Kontakti</a></li>
+    </ul>
+
+</nav>
+```
+
+</header>
+
+<div id="clock"></div>
+
+<section class="hero">
+
+```
+<div class="hero-content">
+
+    <h1 class="welcome">
+        MIRË SE VINI NË RESTAURANT KOHA
+    </h1>
+
+    
+
+    <p>
+        Kuzhinë tradicionale dhe moderne në zemër të Mitrovicës.
+        Një ambient elegant për familjen, miqtë dhe çdo festë.
+    </p>
+
+    <div class="buttons">
+        <a href="menu.html" class="btn">Shiko Menunë</a>
+        <a href="contact.html" class="btn btn2">Rezervo</a>
+    </div>
+
+    
+
+
+
+
+</section>
+
+
+
+<footer class="footer">
+
+    <div class="footer-grid">
+
+        <div class="footer-box">
+            <h2>Restaurant Koha</h2>
+            <p>
+                Shije tradicionale dhe moderne në zemër të Mitrovicës.
+            </p>
         </div>
-    </section>
+
+        <div class="footer-box">
+            <h3>Orari</h3>
+            <p>E Hënë - E Premte</p>
+            <p>08:00 - 23:00</p>
+            <p>Fundjavë</p>
+            <p>09:00 - 00:00</p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Kontakti</h3>
+            <p>📍 Mitrovicë</p>
+            <p>📞 +383 44 123 456</p>
+            <p>✉️ info@restaurantkoha.com</p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Na Ndiqni</h3>
+
+            <div class="socials">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+
+            <a href="contact.html" class="reserve-btn">
+                Rezervo Tavolinë
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Restaurant Koha | Mitrovicë
+    </div>
+
+</footer>
 
 
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Restaurant Koha - Mitrovicë</p>
-    </footer>
+<script src="script.js"></script>
 
-    <script src="script.js"></script>
 </body>
 </html>

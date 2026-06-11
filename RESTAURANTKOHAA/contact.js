@@ -39,3 +39,19 @@ function dergo() {
 function closePopup() {
     document.getElementById("popup").style.display = "none";
 }
+document.addEventListener("DOMContentLoaded", () => {
+    const year = document.getElementById("contactYear");
+    if (year) {
+        year.textContent = new Date().getFullYear();
+    }
+
+    const goTopBtn = document.getElementById("goTopBtn");
+    if (goTopBtn) {
+        goTopBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    }
+});
