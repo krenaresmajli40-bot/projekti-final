@@ -10,79 +10,116 @@ background:#111;
 color:whitesmoke;
 overflow-x:hidden;
 }
-
-/* NAVBAR */
-
 .navbar{
-position:fixed;
-top:0;
-left:0;
-width:100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-display:flex;
-justify-content:space-between;
-align-items:center;
+    padding: 10px 50px;
 
-padding:20px 60px;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(14px);
 
-background:rgba(0,0,0,.50);
-backdrop-filter:blur(10px);
-
-border-bottom:2px solid gold;
-
-z-index:1000;
-
-
+    border-bottom: 1px solid rgba(255, 215, 0, 0.25);
 }
 
+/* LEFT SIDE */
+.nav-left{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* LOGO IMAGE (MA E MADHE + CUTE) */
+.nav-logo{
+    width: 70px;
+    height: 70px;
+
+    object-fit: cover;
+    border-radius: 50%;
+
+    border: 3px solid gold;
+
+    box-shadow: 0 0 18px rgba(255, 215, 0, 0.35);
+
+    transition: 0.3s ease;
+}
+
+/* hover cute effect */
+.nav-logo:hover{
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+}
+
+/* TEXT */
 .logo{
-color:gold;
-font-size:30px;
-font-weight:bold;
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.5px;
 }
 
+/* LINKS */
 .nav-links{
-display:flex;
-list-style:none;
-}
-
-.nav-links li{
-margin-left:30px;
+    display: flex;
+    list-style: none;
+    gap: 28px;
 }
 
 .nav-links a{
-color:white;
-text-decoration:none;
-font-size:18px;
-position:relative;
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+
+    position: relative;
+    transition: 0.3s ease;
 }
 
+/* underline effect */
 .nav-links a::after{
-content:"";
-position:absolute;
-left:0;
-bottom:-8px;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
 
+    width: 0%;
+    height: 2px;
 
-width:0;
-height:2px;
+    background: gold;
+    transition: 0.3s ease;
+}
 
-background:gold;
-transition:.3s;
-
-
+.nav-links a:hover{
+    color: white;
 }
 
 .nav-links a:hover::after,
 .nav-links a.active::after{
-width:100%;
+    width: 100%;
 }
 
-.nav-links a:hover{
-color:gold;
-}
+/* MOBILE */
+@media(max-width:768px){
+    .nav-links{
+        display: none;
+    }
 
+    .navbar{
+        padding: 10px 20px;
+    }
+
+    .nav-logo{
+        width: 55px;
+        height: 55px;
+    }
+}
 /* ORA */
 
 #clock{
