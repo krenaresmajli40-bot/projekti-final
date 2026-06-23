@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakti - Restaurant Koha</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="assets/download35.png" alt="Logo" class="nav-logo">
+            <h1 class="logo">Restaurant Koha</h1>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Ballina</a></li>
+            <li><a href="rreth-nesh.html">Rreth Nesh</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a class="active" href="contact.html">Kontakti</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="contact-hero">
+    <div class="contact-overlay"></div>
+
+    <div class="contact-container">
+        <div class="contact-left reveal">
+            <span class="badge">📩 Kontakto Restaurant Koha</span>
+            <h2>Na kontakto për rezervime, porosi dhe bashkëpunime</h2>
+            <p>
+                Plotëso formularin më poshtë dhe na dërgo mesazhin tënd.
+                Ne përgjigjemi shpejt dhe me kujdes për çdo kërkesë.
+            </p>
+
+            <div class="contact-highlights">
+                <div class="highlight-card">
+                    <span>🍽️</span>
+                    <div>
+                        <h4>Rezervime</h4>
+                        <p>Tavolina, evente dhe raste speciale.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-card">
+                    <span>📞</span>
+                    <div>
+                        <h4>Telefon</h4>
+                        <p>049 616 369</p>
+                    </div>
+                </div>
+
+                <div class="highlight-card">
+                    <span>📍</span>
+                    <div>
+                        <h4>Lokacioni</h4>
+                        <p>Mitrovicë, Kosovë</p>
+                    </div>
+                </div>
+
+                <div class="highlight-card">
+                    <span>✨</span>
+                    <div>
+                        <h4>Përgjigje e shpejtë</h4>
+                        <p>Ne mundohemi të përgjigjemi sa më shpejt që të jetë e mundur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-right reveal">
+            <div class="contact-card">
+                <h3>Na dërgo mesazh</h3>
+
+                <div class="form-grid">
+                    <div class="input-box">
+                        <input id="emri" type="text" required>
+                        <label for="emri">Emri</label>
+                    </div>
+
+                    <div class="input-box">
+                        <input id="mbiemri" type="text" required>
+                        <label for="mbiemri">Mbiemri</label>
+                    </div>
+
+                    <div class="input-box full">
+                        <input id="telefoni" type="text" required>
+                        <label for="telefoni">Numri i telefonit</label>
+                    </div>
+
+                    <div class="input-box full">
+                        <textarea id="mesazhi" required></textarea>
+                        <label for="mesazhi">Mesazhi</label>
+                    </div>
+                </div>
+
+                <button type="button" onclick="dergo()">Dërgo Mesazhin</button>
+                <p id="msg"></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bottom-cards">
+    <div class="container">
+        <div class="section-title reveal">
+            <span class="section-tag">Info të rëndësishme</span>
+            <h2>Gjithçka që duhet të dish para se të na kontaktosh</h2>
+        </div>
+
+        <div class="cards-grid">
+            <div class="mini-card reveal">
+                <div class="mini-icon">⏰</div>
+                <h3>Shërbim i shpejtë</h3>
+                <p>Na shkruaj dhe ne përgjigjemi sa më shpejt që të jetë e mundur.</p>
+            </div>
+
+            <div class="mini-card reveal">
+                <div class="mini-icon">☎️</div>
+                <h3>Na telefono</h3>
+                <p>Numri i restaurantit: <strong>049 616 369</strong></p>
+            </div>
+
+            <div class="mini-card reveal">
+                <div class="mini-icon">🍽️</div>
+                <h3>Rezervime</h3>
+                <p>Na shkruaj për rezervime  dhe pyetje rreth menusë.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="popup" id="popup">
+    <div class="popup-box">
+        <h3>✅ Mesazhi u dërgua!</h3>
+        <p>Faleminderit që na kontaktuat. Do t'ju përgjigjemi sa më shpejt.</p>
+        <button type="button" onclick="closePopup()">Mbyll</button>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div class="footer-glow"></div>
+
+    <div class="footer-wrap">
+        <div class="footer-brand">
+            <div class="footer-mark">K</div>
+            <div>
+                <h3>Restaurant Koha</h3>
+                <p>Mitrovicë • shije, stil dhe atmosferë</p>
+            </div>
+        </div>
+
+        <div class="footer-info">
+            <div>
+                <span class="footer-label">Lokacioni</span>
+                <p>Mitrovicë, Kosovë</p>
+            </div>
+
+            <div>
+                <span class="footer-label">Kontakt</span>
+                <p>+383 44 123 456</p>
+            </div>
+
+            <div>
+                <span class="footer-label">Orari</span>
+                <p>08:00 – 23:00</p>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <span class="footer-label">Na ndiqni</span>
+
+            <div class="social-icons">
+                <a href="https://instagram.com" target="_blank" rel="noopener" class="social-btn instagram" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zm9.3 1.7a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2zM12 7.2A4.8 4.8 0 1 1 7.2 12 4.8 4.8 0 0 1 12 7.2zm0 2A2.8 2.8 0 1 0 14.8 12 2.8 2.8 0 0 0 12 9.2z"></path>
+                    </svg>
+                </a>
+
+                <a href="https://facebook.com" target="_blank" rel="noopener" class="social-btn facebook" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M14 9.5V8.2c0-.7.4-1.2 1.2-1.2H17V4h-2.2C12.4 4 11 5.5 11 7.7v1.8H9v3h2V20h3v-7.5h2.6l.4-3H14z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© <span id="footerYear"></span> Restaurant Koha • Të gjitha të drejtat e rezervuara</p>
+        <button type="button" class="footer-top" id="footerTopBtn">↑</button>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="contact.js"></script>
+</body>
+</html>

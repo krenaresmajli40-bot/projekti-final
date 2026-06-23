@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     let current = 0;
-    let sliderTimer;
+    let sliderTimer = null;
 
     const menuImage = document.getElementById("menuImage");
     const prevBtn = document.getElementById("prevBtn");
@@ -37,6 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const dots = document.querySelectorAll(".dot");
     const slideTitle = document.getElementById("slideTitle");
     const slideText = document.getElementById("slideText");
+
+    if (!menuImage || !prevBtn || !nextBtn || !slideTitle || !slideText) return;
 
     function updateSlider(index) {
         menuImage.style.opacity = "0";
@@ -48,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
             slideText.textContent = texts[index];
 
             dots.forEach(dot => dot.classList.remove("active"));
-            dots[index].classList.add("active");
+            if (dots[index]) dots[index].classList.add("active");
 
             menuImage.style.opacity = "1";
             menuImage.style.transform = "scale(1)";
@@ -86,19 +88,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateSlider(0);
     startAutoSlide();
+
+    const footerYear = document.getElementById("footerYear");
+    if (footerYear) {
+        footerYear.textContent = new Date().getFullYear();
+    }
+
+    const footerTopBtn = document.getElementById("footerTopBtn");
+    if (footerTopBtn) {
+        footerTopBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    }
+
+    const footer = document.querySelector(".site-footer");
+    if (footer) {
+        footer.addEventListener("mousemove", (e) => {
+            const rect = footer.getBoundingClientRect();
+            footer.style.setProperty("--mx", `${e.clientX - rect.left}px`);
+            footer.style.setProperty("--my", `${e.clientY - rect.top}px`);
+        });
+    }
 });
-const scrollTopBtn =
-document.getElementById("scrollTop");
-
-if(scrollTopBtn){
-
-scrollTopBtn.addEventListener("click",()=>{
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
-
-});
-
-}
