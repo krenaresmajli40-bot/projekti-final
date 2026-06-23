@@ -10,7 +10,6 @@ function updateClock() {
 
 const now = new Date();
 
-const time = now.toLocaleTimeString("sq-AL");
 
 const date = now.toLocaleDateString("sq-AL", {
     weekday: "long",
@@ -21,7 +20,6 @@ const date = now.toLocaleDateString("sq-AL", {
 
 if(clock){
     clock.innerHTML = `
-        ${time}
         <br>
         <small>${date}</small>
     `;
@@ -32,6 +30,20 @@ if(clock){
 
 updateClock();
 setInterval(updateClock, 1000);
+
+document.addEventListener("DOMContentLoaded", () => {
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    navLinks.forEach(link => {
+        const linkHref = link.getAttribute("href");
+        if (linkHref === currentPage) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+    });
+});
 
 // =====================================
 // NAVBAR SCROLL EFFECT
@@ -336,3 +348,36 @@ btn.addEventListener(
 // =====================================
 // END
 // =====================================
+
+
+
+    const footerText = document.querySelector("footer p");
+    if (footerText) {
+        footerText.textContent = `© ${new Date().getFullYear()} Restaurant Koha - Mitrovicë`;
+    }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const year = document.getElementById("footerYear");
+    if (year) {
+        year.textContent = new Date().getFullYear();
+    }
+
+    const topBtn = document.getElementById("footerTopBtn");
+    if (topBtn) {
+        topBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    }
+
+    const footer = document.querySelector(".site-footer");
+    if (footer) {
+        footer.addEventListener("mousemove", (e) => {
+            const rect = footer.getBoundingClientRect();
+            footer.style.setProperty("--mx", `${e.clientX - rect.left}px`);
+            footer.style.setProperty("--my", `${e.clientY - rect.top}px`);
+        });
+    }
+});
