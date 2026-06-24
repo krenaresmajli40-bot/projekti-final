@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
     revealItems.forEach(item => revealObserver.observe(item));
 
     const images = [
-        "assets/menu1.png",
-        "assets/menu2.png"
+        "assets/assets/menu1.png",
+        "assets/assets/menu2.png"
     ];
 
     const titles = [

@@ -4,25 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu - Restaurant Koha</title>
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="rreth-nesh.css">
     <link rel="stylesheet" href="menu.css">
 </head>
 <body class="menu-page">
 
-<header>
-   
+<header class="site-header">
     <nav class="navbar">
         <div class="nav-left">
-            <img src="assets/download35.png" alt="Logo" class="nav-logo">
+            <img src="assets/assets/download35.png" alt="Logo" class="nav-logo">
             <h1 class="logo">Restaurant Koha</h1>
         </div>
 
         <ul class="nav-links">
             <li><a href="index.html">Ballina</a></li>
             <li><a href="rreth-nesh.html">Rreth Nesh</a></li>
-            <li><a class="active" href="menu.html">Menu</a></li>
+            <li><a href="menu.html" class="active">Menu</a></li>
             <li><a href="contact.html">Kontakti</a></li>
         </ul>
     </nav>
@@ -33,38 +29,38 @@
 
     <div class="hero-content reveal">
         <span class="hero-badge">Restaurant Koha • Mitrovicë</span>
-        <h1>Menuja  jonë e veçantë</h1>
+        <h1>Menu që bashkon shijen dhe elegancën</h1>
         <p>
-            Shfleto menunë tonë moderne dhe elegante. Me shigjeta mund t’i ndërroni fotot,
-            ose ato ndryshojnë vetë automatikisht.
+            Shfleto dy menutë tona dhe zbulo pjatat më të mira, të përgatitura me kujdes,
+            stil dhe përbërës të zgjedhur.
         </p>
 
         <div class="hero-buttons">
-            <a href="contact.html" class="btn btn-gold">Rezervo Tani</a>
-            <a href="rreth-nesh.html" class="btn btn-outline">Më Shumë</a>
+            <a href="#sliderSection" class="btn btn-gold">Shiko Menunë</a>
+            <a href="contact.html" class="btn btn-outline">Rezervo Tani</a>
         </div>
     </div>
 </section>
 
-<section class="menu-section">
+<section class="menu-section" id="sliderSection">
     <div class="container">
         <div class="section-head reveal">
-            <span class="section-tag">Menu</span>
-            <h3>Zgjidhni shijen tuaj</h3>
+            <span class="section-tag">Menutë tona</span>
+            <h3>Zgjidh faqen që dëshiron të shohësh</h3>
             <p>
-                Dy menutë tona janë vendosur në slider për një prezantim modern dhe të pastër.
+                Kalo nga një menu në tjetrën me shigjetat ose prit që të lëvizin automatikisht.
             </p>
         </div>
 
         <div class="slider-wrapper reveal">
             <div class="slider-box">
-                <button class="arrow-btn left" id="prevBtn" aria-label="Previous slide">&#10094;</button>
+                <button class="arrow-btn left" id="prevBtn" type="button" aria-label="Më parë">‹</button>
 
                 <div class="image-wrapper">
-                    <img id="menuImage" src="assets/menu1.png" alt="Menu Restaurant Koha">
+                    <img id="menuImage" src="assets/assets/menu1.png" alt="Menu">
                 </div>
 
-                <button class="arrow-btn right" id="nextBtn" aria-label="Next slide">&#10095;</button>
+                <button class="arrow-btn right" id="nextBtn" type="button" aria-label="Tjetra">›</button>
             </div>
 
             <div class="dots">
@@ -84,21 +80,21 @@
     <div class="container">
         <div class="cards-grid">
             <div class="premium-card reveal">
-                <div class="card-icon">🍽️</div>
-                <h4>Shije tradicionale</h4>
-                <p>Ushqime të përgatitura me kujdes, shije dhe stil modern.</p>
+                <div class="card-icon">✦</div>
+                <h4>Pjata të zgjedhura</h4>
+                <p>Ushqime të përgatitura me kujdes për shije të balancuar dhe prezantim elegant.</p>
             </div>
 
             <div class="premium-card reveal">
-                <div class="card-icon">✨</div>
-                <h4>Prezantim elegant</h4>
-                <p>Menu e paraqitur në mënyrë të pastër, profesionale dhe luksoze.</p>
+                <div class="card-icon">◇</div>
+                <h4>Receta të freskëta</h4>
+                <p>Çdo pjatë përgatitet me përbërës të freskët dhe cilësi të lartë.</p>
             </div>
 
             <div class="premium-card reveal">
-                <div class="card-icon">⭐</div>
-                <h4>Përvojë e këndshme</h4>
-                <p>Një ambient i ngrohtë që e bën vizitën tuaj më të veçantë.</p>
+                <div class="card-icon">✧</div>
+                <h4>Atmosferë e këndshme</h4>
+                <p>Ambient modern për të shijuar ushqimin në rehati dhe stil.</p>
             </div>
         </div>
     </div>
@@ -158,7 +154,6 @@
     </div>
 </footer>
 
-<script src="script.js"></script>
 <script src="menu.js"></script>
 </body>
 </html>

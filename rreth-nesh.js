@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const update = () => {
             current += step;
+
             if (current < target) {
                 counter.textContent = current.toLocaleString();
                 requestAnimationFrame(update);
@@ -46,12 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     counters.forEach(counter => counterObserver.observe(counter));
 
-    const footerText = document.querySelector("footer p");
-    if (footerText) {
-        footerText.textContent = `© ${new Date().getFullYear()} Restaurant Koha - Mitrovicë`;
-    }
-});
-document.addEventListener("DOMContentLoaded", () => {
     const year = document.getElementById("footerYear");
     if (year) {
         year.textContent = new Date().getFullYear();
